@@ -1,0 +1,53 @@
+{
+    "AIBLOCK_F7V1": {
+        "inherits": [
+            "FAMILY_STM32"
+        ],
+        "core": "Cortex-M7F",
+        "extra_labels_add": [
+            "STM32F7",
+            "STM32F756xG",
+            "STM32F756ZG"
+        ],
+        "macros_add": [
+            "STM32F756xx",
+            "MBED_TICKLESS",
+            "EXTRA_IDLE_STACK_REQUIRED",
+            "MBEDTLS_CONFIG_HW_SUPPORT",
+            "USE_USER_DEFINED_HAL_ETH_MSPINIT",
+            "AIBLOCK_F7V1_HAL_ETH_MSPINIT",
+            "AIBLOCK_HAL_ETH_MSPINIT"
+        ],
+        "config": {
+            "clock_source": {
+                "help": "Mask value : USE_PLL_HSE_XTAL | USE_PLL_HSI",
+                "value": "USE_PLL_HSE_XTAL|USE_PLL_HSI",
+                "macro_name": "CLOCK_SOURCE"
+            }
+        },
+        "device_has_add": [
+            "ANALOGOUT",
+            "CAN",
+            "CRC",
+            "EMAC",
+            "SERIAL_ASYNCH",
+            "TRNG",
+            "FLASH",
+            "USBDEVICE",
+            "MPU"
+        ],
+        "components": [
+            "SD"
+        ],
+        "release_versions": [
+            "2",
+            "5"
+        ],
+        "device_name": "STM32F756ZG",
+        "overrides": {
+            "lpticker_delay_ticks": 0,
+            "network-default-interface-type": "ETHERNET"
+        },
+        "sd.CMD_TIMEOUT": 2000
+    }
+}
