@@ -54,6 +54,8 @@ uint8_t SetSysClock_PLL_HSE();
 uint8_t SetSysClock_PLL_HSI(void);
 #endif /* #if ENABLE_PLL_HSI */
 
+uint8_t SetSysClock_PLL(int source);
+
 void SystemInit(void)
 {
     SCB->CPACR |= ((3UL << 10 * 2) | (3UL << 11 * 2));
